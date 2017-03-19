@@ -36,6 +36,7 @@
                             <li><a ui-sref="example1">Example 1</a></li>
                             <li><a ui-sref="example2">Example 2</a></li>
                             <li><a ui-sref="example3">Example 3</a></li>
+                            <li><a ui-sref="example4">Example 4</a></li>
                         </ul>
                     </li>
                     <li><a ui-sref="documentation">Documentation</a></li>
@@ -52,7 +53,7 @@
             <p>Spice up your html image maps with AngularJS!</p>
         </div>
     </div>
-    
+
     <div class="ui-view-container">
         <div ui-view></div>
     </div>
@@ -71,7 +72,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.1/ui-bootstrap-tpls.min.js"></script>
 
     <!-- Angular Maphilight -->
-    <script src="lib/angular.maphilight.min.js"></script>
+    <script src="lib/angular.maphilight.js"></script>
 
 
     <!--Examples and Documentation JS Files-->
@@ -81,6 +82,7 @@
     <script src="documentation/js/example1.js"></script>
     <script src="documentation/js/example2.js"></script>
     <script src="documentation/js/example3.js"></script>
+    <script src="documentation/js/example4.js"></script>
     <script src="documentation/js/documentation.js"></script>
 
     <!--Some Styling-->
@@ -88,23 +90,23 @@
         body {
             padding-top: 90px;
         }
-        
+
         .jumbotron {
             padding-top: 20px;
             padding-bottom: 20px;
         }
-        
+
         .btn {
             margin-top: 4px;
             margin-bottom: 4px;
         }
         /* Have to set height explicity on ui-view to prevent collapsing during animation*/
-        
+
         .ui-view-container {
             position: relative;
             height: 65px;
         }
-        
+
         [ui-view].ng-enter,
         [ui-view].ng-leave {
             position: absolute;
@@ -115,28 +117,28 @@
             -o-transition: all .5s ease-in-out;
             transition: all .5s ease-in-out;
         }
-        
+
         [ui-view].ng-enter {
             opacity: 0;
             -webkit-transform: translate3d(-100px, 0, 0);
             -moz-transform: translate3d(-100px, 0, 0);
             transform: translate3d(-100px, 0, 0);
         }
-        
+
         [ui-view].ng-enter-active {
             opacity: 1;
             -webkit-transform: translate3d(0, 0, 0);
             -moz-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
         }
-        
+
         [ui-view].ng-leave {
             opacity: 1;
             -webkit-transform: translate3d(0, 0, 0);
             -moz-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
         }
-        
+
         [ui-view].ng-leave-active {
             opacity: 0;
             -webkit-transform: translate3d(100px, 0, 0);
